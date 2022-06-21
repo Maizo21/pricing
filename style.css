@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    160deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(20, 93, 160, 1) 65%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+}
+
+nav {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  background-color: #051220;
+  padding: 8px 10px;
+}
+
+nav .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+nav .logo img {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+nav ul {
+  justify-self: flex-end;
+  display: flex;
+  column-gap: 25px;
+  list-style: none;
+  align-items: center;
+  padding-right: 4%;
+}
+
+nav ul li a {
+  justify-self: flex-end;
+  display: flex;
+  column-gap: 25px;
+  list-style: none;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+nav ul li a:hover {
+  color: gray;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  width: 80%;
+  max-width: 700px;
+  margin: 50px auto 0;
+}
+
+section div {
+  text-align: center;
+  width: 100%;
+  max-width: 200px;
+  padding: 40px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 5px;
+  transition: 0.3s;
+  position: relative;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+section div:nth-child(2) {
+  background: rgb(11, 34, 58);
+  background: linear-gradient(
+    0deg,
+    rgba(11, 34, 58, 1) 0%,
+    rgba(71, 200, 191, 1) 80%
+  );
+}
+
+section div:nth-child(1) {
+  background: rgb(11, 34, 58);
+  background: linear-gradient(
+    0deg,
+    rgba(11, 34, 58, 1) 0%,
+    rgba(20, 93, 160, 1) 80%
+  );
+}
+
+section div:nth-child(3) {
+  background: rgb(11, 34, 58);
+  background: linear-gradient(
+    0deg,
+    rgba(11, 34, 58, 1) 0%,
+    rgba(189, 218, 236, 1) 80%
+  );
+}
+
+section div:hover {
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+section div:hover button {
+  opacity: 1;
+}
+
+section div img {
+  width: 100%;
+  height: 100%;
+  max-width: 120px;
+  max-height: 120px;
+  object-fit: cover;
+}
+
+section div h2 {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+section div p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+section div small {
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+section div button {
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 5px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.3s;
+  position: absolute;
+  bottom: -5%;
+  opacity: 0;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 830px) {
+  section {
+    grid-template-columns: 1fr;
+    max-width: none;
+    width: 100%;
+    row-gap: 30px;
+  }
+
+  section div {
+    max-width: none;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    place-items: center;
+    padding: 10px 5px;
+    row-gap: 0;
+  }
+
+  section div:nth-child(2) {
+    background: rgb(11, 34, 58);
+    background: linear-gradient(
+      90deg,
+      rgba(11, 34, 58, 1) 0%,
+      rgba(71, 200, 191, 1) 80%
+    );
+  }
+
+  section div:nth-child(1) {
+    background: rgb(11, 34, 58);
+    background: linear-gradient(
+      90deg,
+      rgba(11, 34, 58, 1) 0%,
+      rgba(20, 93, 160, 1) 80%
+    );
+  }
+
+  section div:nth-child(3) {
+    background: rgb(11, 34, 58);
+    background: linear-gradient(
+      90deg,
+      rgba(11, 34, 58, 1) 0%,
+      rgba(189, 218, 236, 1) 80%
+    );
+  }
+
+  section div img {
+    grid-row: 1/3;
+    grid-column: 3;
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  section div p {
+    grid-row: 1/3;
+    grid-column: 1;
+    font-size: 20px;
+  }
+
+  section div small {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  section div h2 {
+    font-size: 26px;
+  }
+
+  section div button {
+    opacity: 1;
+    right: 0;
+    left: 0;
+    bottom: -17px;
+    padding: 6px;
+    border-radius: 30px;
+    width: 30px;
+    margin: 0 auto;
+  }
+}
